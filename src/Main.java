@@ -4,7 +4,7 @@ public class Main {
 
         int year = leapYear(2024);
 
-        boolean clientOS = false;
+        int clientOS = 0;
         int clientDeviceYear = 2015;
         phoneVersion(clientDeviceYear, clientOS);
 
@@ -21,17 +21,17 @@ public class Main {
         return year;
     }
 
-    public static void phoneVersion(int clientDeviceYear, boolean clientOS) {
+    public static void phoneVersion(int clientDeviceYear, int clientOS) {
 
         int currentYear = 2015;
         if (clientDeviceYear < currentYear) {
-            if (clientOS) {
-                System.out.println("Установите версию облегченную приложения для Android по ссылке: ");
-            } else System.out.println("Установите облегченную версию приложения для iOS по ссылке: ");
+            if (clientOS < 1 ) {
+                System.out.println("Установите версию облегченную приложения для iOS по ссылке: ");
+            } else System.out.println("Установите облегченную версию приложения для Android по ссылке: ");
 
-        } else if (clientOS) {
-            System.out.println("Установите версию приложения для Android по ссылке: ");
-        } else System.out.println("Установите версию приложения для iOS по ссылке: ");
+        } else if (clientOS < 1) {
+            System.out.println("Установите версию приложения для iOS по ссылке: ");
+        } else System.out.println("Установите версию приложения для Android по ссылке: ");
     }
     public static void allDays(int deliveryDistance) {
 
